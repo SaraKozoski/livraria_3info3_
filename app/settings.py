@@ -151,6 +151,8 @@ REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
     'PAGE_SIZE': 10,
     'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly', ),  # autorização de acesso
+    'DEFAULT_AUTHENTICATION_CLASSES': ('core.authentication.TokenAuthentication',), # Autenticação no passage.id
+
 }
 
 PASSAGE_APP_ID = os.getenv('PASSAGE_APP_ID', 'app_id')

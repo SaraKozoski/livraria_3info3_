@@ -30,6 +30,7 @@ class UserAdmin(BaseUserAdmin):
         (_('Important dates'), {'fields': ('last_login',)}),
         (_('Groups'), {'fields': ('groups',)}),
         (_('User Permissions'), {'fields': ('user_permissions',)}),
+        (_('Personal Info'), {'fields': ('name', 'passage_id', 'foto')}),# inclua a foto aqui
     )
     readonly_fields = ['last_login']
     add_fieldsets = (
